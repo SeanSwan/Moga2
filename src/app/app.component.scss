@@ -1,4 +1,4 @@
-$size : 50px;
+$size : 55px;
 $items : 5;
 $transition : .5s;
 $bounce : cubic-bezier(.3,1.4,.5,.9);
@@ -7,13 +7,34 @@ $color-outer : rgb(88, 191, 255);
 $background: mix($color-inner, $color-outer);
 $black : shade($color-outer, 80%);
 $start-scale : .5;
-$start-rot : 200deg;
+$start-rot : 190deg;
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800,900');
 
 html, body { height: 100%; }
 body {
-    background: beige;
+    background: linear-gradient(270deg, #4ba1f3, #3a6c9c, #5642a7, #40aaba, #40aaba);
+    background-size: 1000% 1000%;
+    
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName { 
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
     font-family: Alegreya Sans, sans-serif;
 }
 
